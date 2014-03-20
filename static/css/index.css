@@ -1,0 +1,136 @@
+@font-face {
+	font-family: 'bebasregular';
+	src: url('../font/BEBAS___-webfont.eot');
+	src: url('../font/BEBAS___-webfont.eot?#iefix') format('embedded-opentype'),
+	url('../font/BEBAS___-webfont.woff') format('woff'),
+	url('../font/BEBAS___-webfont.ttf') format('truetype'),
+	url('../font/BEBAS___-webfont.svg#bebasregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+body {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+	text-align: center;
+	background: #000000;
+	font: 16px 'bebasregular', Arial, sans-serif;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+#irc, #cc {
+	display: none;
+}
+.derecha {
+	text-align: right;
+}
+#cabecera {
+	margin-top: 5px;
+}
+#barrita {
+	margin-top: -1px;
+	background: #383838;
+	padding: 10px 0px;
+	overflow: hidden;
+}
+.a960 {
+	max-width: 960px;
+	margin: 0 auto;
+}
+.onerow {
+	clear: both;
+}
+.col50 {
+	float: left;
+	width: 50%; 
+}
+
+.select-style {
+	padding: 0;
+	margin: 0;
+	width: 120px;
+	border-radius: 3px;
+	overflow: hidden;
+	background-color: #000000;
+	background: #000000 url("../img/arrowdown.png") no-repeat 90% 50%;
+}
+.select-style select {
+	font: 16px 'bebasregular', sans-serif;
+	color: #ffffff;
+	padding: 5px 8px;
+	width: 130%;
+	border: none;
+	box-shadow: none;
+	background-color: transparent;
+	background-image: none;
+	outline: none;
+    	-moz-outline:none;
+    	-moz-user-focus:ignore;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none; 
+}
+.select-style select:focus {
+	outline: none;
+}
+select:-moz-focusring {
+	color: transparent;
+	text-shadow: 0 0 0 #ffffff;
+}
+#chati {
+	display: inline-block;
+	background: #000000;
+	color: #ffffff;
+	padding: 0 15px 6px 15px;
+	border-radius: 3px;
+	cursor: pointer;
+}
+.ma {
+	color: #ffffff;
+	display: block;
+	margin-top: 5px;
+	font-size: 17px;
+	text-decoration: none;
+}
+
+@media all and (max-width: 500px) {
+        .onerow {
+
+        }
+        .col50 {
+                float: none;
+                width: 99%;
+                text-align: center;
+        }
+        .select-style {
+                margin: 0 auto;
+		margin-bottom: 5px;
+        }
+}
+#locontiene {
+	position: relative;
+}
+#map {
+	height: 600px;
+	background: #011019;
+}
+#irc {
+	opacity: 0.8;
+}
+#locontiene #cc, #locontiene #irc {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 600px;
+	z-index: 9999;
+}
+#locontiene #cc {
+	background: #000000;
+}
+#locontiene #cc img{
+	top: 10px;
+	left: 50%;
+}

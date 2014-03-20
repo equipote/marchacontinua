@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="favicon.ico"/>
+	<title>La marcha continua</title>
+	<link href="css/index.css" rel="stylesheet"/>
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" />
+	<!--[if lte IE 8]>
+		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.ie.css" />
+	<![endif]-->
+</head>
+<body>
+	<div id="cabecera">
+		<img src="img/lmc2.png" alt="la marcha contínua" title="la marcha contínua"/>
+	</div>
+	<div id="barrita">
+		<div class="a960">	
+			<div class="onerow">
+				<div class="col50">
+					<div class="select-style">
+  						<select id="ciudades">
+							<option value="" selected>ELIGE</option>
+						</select>
+					</div>
+				</div>
+				<div id="bchati" class="col50 derecha">
+					<div id="chati">
+						<a href="#" id="linkirc" class="ma" rel="http://dev.democraciarealya.es:9090">CHAT</a></span>
+					</div>
+				</div>
+			</div><!--/row-->
+		</div>
+	</div>
+	<div id="locontiene">
+		<div id="map"></div>
+		<div id="cc"><img src="img/cco.gif"></div>
+		<iframe id="irc" src="#" frameBorder="0"></iframe>
+	</div>
+	<script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script src="js/index.js"></script>
+</body>
+</html>
