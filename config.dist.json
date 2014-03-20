@@ -2,5 +2,5 @@
   'puerto':9001,
   'host':'localhost',
   'APIKEY':'',
-  'datos':'/data/marchas'
+  'datos':'/data/marchas.json'
 }
