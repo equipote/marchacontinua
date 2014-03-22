@@ -20,14 +20,84 @@ img {
 	max-width: 100%;
 	height: auto;
 }
-#irc, #cc {
+#irc, #cc, #loswindows {
 	display: none;
 }
 .derecha {
 	text-align: right;
 }
+#quevamos {
+	margin-top: -2px;
+	margin-bottom: 3px;
+}
+.bvamos {
+	padding: 2px 10px;
+	color: #ffffff;
+	background: #201f1f;
+	text-decoration: none;
+	font-size: 18px;
+	margin-left: 28px;
+	border: 1px solid #383838;
+}
+.az {
+	color: #31DFFF;
+}
+#loswindows {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #000000;
+	color: #ffffff;
+	opacity: 0.9;
+	z-index: 10000;
+}
+#lax {
+	border: 5px solid #FFFFFF;
+	border-radius: 31px;
+	cursor: pointer;
+	display: inline-block;
+	float: right;
+	font-size: 30px;
+	margin-right: 11px;
+	margin-top: 10px;
+	opacity: 1.0;
+	padding: 5px 17px;
+	text-shadow: 2px 5px 18px #000000;
+}
+#quees {
+	font-size: 55px;
+	text-align: left;
+	margin-top: 30px;
+}
+.nopa {
+	opacity: 1.0;
+}
+#desa {
+	font: 15px Arial, sans-serif;
+}
+#principio {
+	text-align: right;
+}
+#texti {
+	text-align: left;
+	line-height: 130%;
+}
 #cabecera {
+	position: relative;
 	margin-top: 5px;
+}
+#cabecera #menub {
+	position: absolute;
+	top: 1px;
+	right: 7px;
+	color: #31DFFF;
+	background: #000000;
+	padding: 2px 5px;
+	font-size: 22px;
+	border-radius: 5px;
+    	cursor: pointer;
 }
 #barrita {
 	margin-top: -1px;
@@ -50,7 +120,7 @@ img {
 .select-style {
 	padding: 0;
 	margin: 0;
-	width: 120px;
+	width: 180px;
 	border-radius: 3px;
 	overflow: hidden;
 	background-color: #000000;
@@ -79,6 +149,9 @@ select:-moz-focusring {
 	color: transparent;
 	text-shadow: 0 0 0 #ffffff;
 }
+.select-style option {
+	background: #000000;
+}
 #chati {
 	display: inline-block;
 	background: #000000;
@@ -95,7 +168,7 @@ select:-moz-focusring {
 	text-decoration: none;
 }
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 320px) {
         .onerow {
 
         }
@@ -128,6 +201,7 @@ select:-moz-focusring {
 	z-index: 9999;
 }
 #locontiene #cc {
+	opacity: 0.9;
 	background: #000000;
 }
 #locontiene #cc img{

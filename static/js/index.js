@@ -1,13 +1,18 @@
-var map = L.map('map', {
-    center: [40.41686, -3.70345],
-    zoom: 12,
-    scrollWheelZoom: false
-});
-//var map = L.map('map', {scrollWheelZoom:false});
-L.tileLayer('http://{s}.tile.cloudmade.com/4f5c5233516d4c39a218425764d98def/56578/256/{z}/{x}/{y}.png', {
-    attribution: '<a href="http://openstreetmap.org">O</a><a href="http://cloudmade.com">C</a>',
-    maxZoom: 18
-}).addTo(map);
+function dibumapa() {
+	map = L.map('map', {
+    		center: [40.41686, -3.70345],
+    		zoom: 13,
+    		scrollWheelZoom: false
+	});
+
+	//var map = L.map('map', {scrollWheelZoom:false});
+
+	L.tileLayer('http://{s}.tile.cloudmade.com/4f5c5233516d4c39a218425764d98def/56578/256/{z}/{x}/{y}.png', {
+		attribution: '<a href="http://openstreetmap.org">O</a><a href="http://cloudmade.com">C</a>',
+    		maxZoom: 18
+	}).addTo(map);
+}
+
 
 $('#ciudades').on('change', function() {
 	var latlon = $(this).val().split(',');
@@ -45,9 +50,9 @@ dibujarMarchas();
 
 var cargado = false;
 
-$('#linkirc').on('click', function(e) {
+$('#chati').on('click', function(e) {
 	e.preventDefault();
-	var irc=$(this).attr('rel');
+	var irc=$('#linkirc').attr('rel');
 	if (!cargado) {
 		$('#cc').show();
         	$('#irc').attr('src', irc);
@@ -57,12 +62,38 @@ $('#linkirc').on('click', function(e) {
 			$('#linkirc').text('X');
         	});
 	} else {
-		if ($(this).text() == 'X') {
-			$(this).text('CHAT');
+		if ($('#linkirc').text() == 'X') {
+			$('#linkirc').text('CHAT');
 		} else {
-			$(this).text('X');
+			$('#linkirc').text('X');
 		}
 		$('#irc').toggle('slow');
 	}
 });
 
+var alto,
+    map;
+
+function dartama() {
+	alto = $(window).height() - $('#locontiene').offset().top;
+	console.log(alto);
+	$('#map').css('height', alto);
+	$('#cc').css('height', alto);
+	$('#irc').css('height', alto);
+}
+
+$(document).on('ready', function() {
+	dartama();
+	dibumapa();
+});
+
+$(window).resize(function() {
+	dartama();
+});
+
+$('#lax').on('click', function() {
+	$('#loswindows').fadeOut();
+});
+$('#que').on('click', function() {
+	$('#loswindows').fadeIn();
+});
